@@ -5,12 +5,17 @@ import java.util.List;
 
 import org.shop.data.Seller;
 import org.shop.repository.SellerRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public final class SellerMapRepository extends AbstractMapRepository<Seller> implements SellerRepository {
-    
+
+    public SellerMapRepository() {
+    }
+
     /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#createOrUpdate(org.shop.data.Seller)
-     */
+         * @see org.shop.repository.SellerRepository#createOrUpdate(org.shop.data.Seller)
+         */
     @Override
     public void createOrUpdateSeller(Seller seller) {
         update(seller);

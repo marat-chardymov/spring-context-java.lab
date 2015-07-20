@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.shop.api.ItemService;
 import org.shop.api.OrderService;
 import org.shop.data.Item;
@@ -11,11 +13,13 @@ import org.shop.data.Order;
 import org.shop.data.Proposal;
 import org.shop.data.User;
 import org.shop.repository.OrderRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
-
+    @Resource
     private OrderRepository orderRepository;
-    
+    @Resource
     private ItemService itemService;
 
     @Override

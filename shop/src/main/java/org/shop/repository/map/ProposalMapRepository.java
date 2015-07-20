@@ -5,12 +5,17 @@ import java.util.List;
 import org.apache.commons.collections.Predicate;
 import org.shop.data.Proposal;
 import org.shop.repository.ProposalRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ProposalMapRepository extends AbstractMapRepository<Proposal> implements ProposalRepository {
 
+    public ProposalMapRepository() {
+    }
+
     /* (non-Javadoc)
-     * @see org.shop.repository.ProposalRepository#getProposal(java.lang.Long)
-     */
+         * @see org.shop.repository.ProposalRepository#getProposal(java.lang.Long)
+         */
     @Override
     public Proposal getProposal(Long id) {
         return get(id);

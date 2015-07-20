@@ -5,14 +5,19 @@ import java.util.List;
 import org.apache.commons.collections.Predicate;
 import org.shop.data.Order;
 import org.shop.repository.OrderRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * The Class OrderMapRepository.
  * 
  * @author Dzmitry_Naskou
  */
+@Repository
 public class OrderMapRepository extends AbstractMapRepository<Order> implements OrderRepository {
-    
+
+    public OrderMapRepository() {
+    }
+
     public OrderMapRepository(long initialSequence) {
         super(initialSequence);
     }
